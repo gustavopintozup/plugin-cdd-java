@@ -27,13 +27,13 @@ def run(metadata: Metadata = None):
                     stderr=subprocess.PIPE,
                     universal_newlines=True)
 
-    if result.stderr == "":
+    if result.returncode == 0:
         for item in result.stdout.split("\n"):
             print(item)
-
-        limpar_arquivos_temporarios()
     else:
         for item in result.stderr.split("\n"):
             print(item)
+        
+    limpar_arquivos_temporarios()
             
     return metadata
