@@ -195,6 +195,7 @@ Nesse arquivo, considera-se somente dois ICPs (ifs e tratadores de exceção), q
 - Calcular os pesos dos ICPs no prettyprint()
 - Implementar o acoplamento contextual (externo as classes)
 - Adicionar testes na classe `IfProcessorTest`.
+- Fazer um prettyprint() em HTML
 
 ## Problemas conhecidos 
 

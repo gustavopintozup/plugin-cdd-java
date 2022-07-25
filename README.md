@@ -75,6 +75,8 @@ Para saber mais como configurar o plugin do cdd, leia esta [documentação](docu
 ## Limitações conhecidas
 
 - O plugin não funciona na plataforma Windows.
+- O plugin não funciona em projetos com submódulos; [essa é uma limitação da ferramenta spoon, que usamos como base](https://stackoverflow.com/questions/43313161/how-do-we-deal-with-the-type-xxx-is-already-defined-in-spoons-source-code-ana).
+- O plugin não funciona quando há definições de módulos no projeto.
 
 ## Dúvidas
 

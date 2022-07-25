@@ -33,6 +33,7 @@ def run(metadata: Metadata = None):
 
         limpar_arquivos_temporarios()
     else:
-        print(result.stderr)
+        for item in result.stderr.split("\n"):
+         print(item)
             
     return metadata
