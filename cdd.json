@@ -1,0 +1,38 @@
+{
+  "limite": 10,
+  "regras": [
+    {
+      "name": "IF_STATEMENT",
+      "cost": 1
+    },
+    {
+      "name": "TRY_CATCH_STATEMENT",
+      "cost": 1
+    },
+    {
+      "name": "SWITCH_STATEMENT",
+      "cost": 1
+    },
+    {
+      "name": "CONDITION",
+      "cost": 1
+    },
+    {
+      "name": "FOR_STATEMENT",
+      "cost": 1
+    },
+    {
+      "name": "FOREACH_STATEMENT",
+      "cost": 1
+    },
+    {
+      "name": "WHILE_STATEMENT",
+      "cost": 1
+    },
+    {
+      "name": "CONTEXT_COUPLING",
+      "cost": 1,
+      "parameters": "br.com.zup.lms"
+    }
+  ]
+}

@@ -2,14 +2,15 @@
 
 Plugin que avalia código Java usando a abordagem do CDD
 
-## Utilização
-
 ![Plugin do CDD na StackSpot](https://github.com/gustavopintozup/stk-dev-java/blob/main/cdd/cdd.gif)
 
+## Utilização
 
 Para utilizar esse plugin, você precisa primeiro ter o o `stk` da StackSpot funcionando no seu computador. Para baixar o `stk`, siga as instruções [aqui](https://stackspot.com/).
 
 Após download e instalação do `stk`, você precisa primeiro criar uma stack pelo `stk`. Acesse [aqui o guia oficial para criação de stacks](https://docs.stackspot.com/v3.6.0/docs/creators-guide/creator-tutorials/howto-create-stack/). 
+
+### Adicionando o plugin a uma stack
 
 Após criar uma stack, basta adicionar o plugin do cdd na stack:
 
@@ -21,6 +22,8 @@ stk add stack git@github.com:gustavopintozup/plugin-cdd-java.git
 > Adding "git@github.com:gustavopintozup/plugin-cdd-java.git" plugin to stack...
 - "git@github.com:gustavopintozup/plugin-cdd-java.git" added to stack.
 ```
+
+### Verificando se o plugin foi adicionando corretamente
 
 Para garantir que o plugin foi importado corretamente, execute os comandos:
 
@@ -40,6 +43,8 @@ stk list plugin   # para listar os plugins atuais
 
 Caso você receba uma saída similar a de cima, você está pronto para começar a usar o plugin!
 
+### Rodando o plugin
+
 Para executar plugin, basta roda-lo *dentro* do diretório do projeto que você deseja realizar a análise de código.
 
 ```
@@ -47,9 +52,24 @@ cd <nome-do-meu-projeto>
 stk apply plugin <sua-stack>/plugin-cdd-java
 ```
 
+### Examinando a saída do plugin
+
+O plugin irá ansalisar todas as classes do projeto e irá imprimir somente as classes em que o valor de ICP seja maior do que 10 (este limite pode ser definido no arquivo de configuração `cdd.json`). 
+
+Um exemplo de saída está abaixo: 
+
+```
+br.com.zup.lms.admin.LearningTaskTest[acoplamento=11,ICP=11]
+br.com.zup.lms.admin.DescricaoTreinamentoParserVisitor[if=6,condicao=6,acoplamento=3,ICP=15]
+br.com.zup.lms.admin.partials.learningtask.LearningTask[acoplamento=15,ICP=15]
+br.com.zup.lms.admin.TaskClassTest[acoplamento=10,ICP=10]
+```
+
+Essa saída lista quatro classes com ICP maior do que o limite definido (no caso, 10). Para cada classe, também é listado (entre colchetes) os ICPs individuais. Por exemplo, a classe `br.com.zup.lms.admin.DescricaoTreinamentoParserVisitor` utiliza 6 `if`s, com 6 condicionais e está acoplada com 3 outras classes.
+
 ## Documentação
 
-Para saber mais como configurar e utilizar o plugin do cdd, leia esta [documentação](documentacao-plugin-cdd.md).
+Para saber mais como configurar o plugin do cdd, leia esta [documentação](documentacao-plugin-cdd.md).
 
 
 ## Limitações conhecidas
@@ -58,4 +78,8 @@ Para saber mais como configurar e utilizar o plugin do cdd, leia esta [documenta
 
 ## Dúvidas
 
-Caso você tenha alguma dúvida ou dificuldade no uso, abra uma issue nesse repositório para que possamos auxilia-lo.
+Caso você tenha alguma dúvida ou dificuldade, abra uma issue nesse repositório para que possamos auxilia-lo.
+
+## Licensa
+
+O plugin está licensiado com MIT
