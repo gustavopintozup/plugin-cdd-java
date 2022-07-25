@@ -1,19 +1,22 @@
+import os
 from templateframework.metadata import Metadata
 
 def run(metadata: Metadata = None):
-    print(metadata)
-
-    import os
     
+    def encontar_jar_cdd():
+        import glob
+        home = os.path.expanduser('~')
+
+        for file in glob.glob(home + "/.stk/stacks/*/plugin-cdd-java/cdd.jar"):
+            return os.path.abspath(file)
+            
     def limpar_arquivos_temporarios():
         if os.path.isdir('spooned'):
             import shutil
             shutil.rmtree('spooned')
 
     target_project = str(metadata.target_path)
-
-    home = os.path.expanduser('~')
-    dir_cdd_jar = home + "/.stk/stacks/stk-geral/plugin-cdd-java/cdd.jar"
+    dir_cdd_jar = encontar_jar_cdd()
     
     comando_java = ["java", "-jar", dir_cdd_jar, "-p", target_project]
 
