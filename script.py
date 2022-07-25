@@ -1,6 +1,8 @@
+from curses import meta
 from templateframework.metadata import Metadata
 
 def run(metadata: Metadata = None):
+    print(metadata)
 
     import os
     
@@ -12,7 +14,7 @@ def run(metadata: Metadata = None):
     target_project = str(metadata.target_path)
 
     home = os.path.expanduser('~')
-    dir_cdd_jar = home + "/.stk/stacks/dev-java/cdd/cdd.jar"
+    dir_cdd_jar = home + "/.stk/stacks/stk-geral/plugin-cdd-java/cdd.jar"
     
     comando_java = ["java", "-jar", dir_cdd_jar, "-p", target_project]
 
