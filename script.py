@@ -1,4 +1,3 @@
-from curses import meta
 from templateframework.metadata import Metadata
 
 def run(metadata: Metadata = None):
