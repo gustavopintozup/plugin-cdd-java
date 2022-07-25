@@ -6,26 +6,11 @@ category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/y
 compatibility:
   - java
   - spring
-about: docs/about.md
-usage: docs/usage.md
-use-case: docs/use-case.md
-implementation: docs/implementation.md
-technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies
-  - "Api"
+about: README.md
+usage: documentacao-plugin-cdd.md.md
 types:
   - app
-inputs:
-  - label: Input Example
-    type: text
-    name: example
-    default: any text
-  - label: Example of number
-    type: int
-    name: any_number
-    default: "10"
-  - label: Example of list
-    type: multiselect
-    name: any_list
-    items:
-      - item1
-      - item2
+hooks:
+  - type: run-script
+    trigger: before-render
+    script: script.py

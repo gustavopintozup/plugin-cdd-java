@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # plugin-cdd-java
 
 Plugin que avalia código Java usando a abordagem do CDD
@@ -10,19 +9,38 @@ Plugin que avalia código Java usando a abordagem do CDD
 
 Para utilizar esse plugin, você precisa primeiro ter o o `stk` da StackSpot funcionando no seu computador. Para baixar o `stk`, siga as instruções [aqui](https://stackspot.com/).
 
-Após download e instalação do `stk`, você precisa importar essa stack deste repositório na sua instalação do `stk`:
+Após download e instalação do `stk`, você precisa primeiro criar uma stack pelo `stk`. Acesse [aqui o guia oficial para criação de stacks](https://docs.stackspot.com/v3.6.0/docs/creators-guide/creator-tutorials/howto-create-stack/). 
+
+Após criar uma stack, basta adicionar o plugin do cdd na stack:
 
 ```
-stk import stack git@github.com:gustavopintozup/plugin-cdd-java.git
+stk add stack git@github.com:gustavopintozup/plugin-cdd-java.git
+
+> Verifying "git@github.com:gustavopintozup/plugin-cdd-java.git" plugin git repository...
+- Plugin repository is valid.
+> Adding "git@github.com:gustavopintozup/plugin-cdd-java.git" plugin to stack...
+- "git@github.com:gustavopintozup/plugin-cdd-java.git" added to stack.
 ```
 
-Para garantir que o plugin foi importado corretamente, execute o comando:
+Para garantir que o plugin foi importado corretamente, execute os comandos:
 
 ```
-stk list plugin
+git push          # para enviar as modificações na stack para o repo remoto
+stk update stack  # para atualizar o stk com as modificações remotas
+stk list plugin   # para listar os plugins atuais
+
+#...
+
++-----------------+---------------------------------------------------------+---------+-----------------+
+| name            | description                                             | types   | version(latest) |
++-----------------+---------------------------------------------------------+---------+-----------------+
+| plugin-cdd-java | Plugin que avalia código Java usando a abordagem do CDD | ['app'] | no release      |
++-----------------+---------------------------------------------------------+---------+-----------------+
 ```
 
-Para execução do plugin, basta roda-lo *dentro* do diretório do projeto que você deseja realizar a análise de código.
+Caso você receba uma saída similar a de cima, você está pronto para começar a usar o plugin!
+
+Para executar plugin, basta roda-lo *dentro* do diretório do projeto que você deseja realizar a análise de código.
 
 ```
 cd <nome-do-meu-projeto>
