@@ -28,11 +28,11 @@ def run(metadata: Metadata = None):
                     universal_newlines=True)
 
     if result.stderr == "":
-        print(result.stderr)
-    else:
         for item in result.stdout.split("\n"):
             print(item)
 
         limpar_arquivos_temporarios()
+    else:
+        print(result.stderr)
             
     return metadata
