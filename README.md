@@ -8,14 +8,30 @@ Plugin que avalia código Java usando a abordagem do CDD
 
 Para utilizar esse plugin, você precisa primeiro ter o o `stk` da StackSpot funcionando no seu computador. Para baixar o `stk`, siga as instruções [aqui](https://stackspot.com/).
 
-Após download e instalação do `stk`, você precisa primeiro criar uma stack pelo `stk`. Acesse [aqui o guia oficial para criação de stacks](https://docs.stackspot.com/v3.6.0/docs/creators-guide/creator-tutorials/howto-create-stack/). 
+<!-- Usando o `stk`, você pode usar o plugin de maneira isolada, ou associado a uma stack. 
+
+### Usando o plugin de maneira isolada
+
+Para usar o plugin isoladamente, primeiro baixe o fonte desse repositório na sua máquina local.
+
+```
+git clone git@github.com:gustavopintozup/plugin-cdd-java.git
+```
+
+Depois de baixar, para rodar o plugin em um repositório, basta rodar o seguinte comando. 
+
+```
+```
+-->
 
 ### Adicionando o plugin a uma stack
 
-Após criar uma stack, basta adicionar o plugin do cdd na stack:
+Após download e instalação do `stk`, você precisa primeiro criar uma stack pelo `stk`. Acesse [aqui o guia oficial para criação de stacks](https://docs.stackspot.com/v3.6.0/docs/creators-guide/creator-tutorials/howto-create-stack/). 
+
+Após criar uma stack, basta adicionar o plugin do cdd na stack. Para isso, entre na pasta da sua stack e rode o comando abaixo:
 
 ```
-stk add stack git@github.com:gustavopintozup/plugin-cdd-java.git
+stk add plugin git@github.com:gustavopintozup/plugin-cdd-java.git
 
 > Verifying "git@github.com:gustavopintozup/plugin-cdd-java.git" plugin git repository...
 - Plugin repository is valid.
@@ -76,7 +92,6 @@ Para saber mais como configurar o plugin do cdd, leia esta [documentação](docu
 
 - O plugin não funciona na plataforma Windows.
 - O plugin não funciona em projetos com submódulos; [essa é uma limitação da ferramenta spoon, que usamos como base](https://stackoverflow.com/questions/43313161/how-do-we-deal-with-the-type-xxx-is-already-defined-in-spoons-source-code-ana).
-- O plugin não funciona quando há definições de módulos no projeto.
 
 ## Dúvidas
 
@@ -84,4 +99,4 @@ Caso você tenha alguma dúvida ou dificuldade, abra uma issue nesse repositóri
 
 ## Licensa
 
-O plugin está licensiado com MIT
+O plugin está licenciado com MIT
