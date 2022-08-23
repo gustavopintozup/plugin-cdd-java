@@ -40,7 +40,7 @@ def download_cdd_file_if_needed():
                 print("We were unable to download the 'cdd.json' file. Please check your connection and try again.")
                 sys.exit(0)
         else:
-            print("Without the 'cdd.json' file, we cannot perform the analysis.")
+            print("Without the 'cdd.json' file, we cannot perform the source code analysis.")
             sys.exit(0)
 
 def run(metadata: Metadata = None):

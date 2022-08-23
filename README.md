@@ -1,12 +1,7 @@
 # plugin-cdd-java
 
-## Jinja
 Plugin que avalia código Java usando a abordagem do CDD
 
-You can use jinja to make a template-data folder more dynamic.
-![Plugin do CDD na StackSpot](https://github.com/gustavopintozup/stk-dev-java/blob/main/cdd/cdd.gif)
-
-complete documentation of jinja: https://jinja.palletsprojects.com/en/3.0.x/templates/
 ## Utilização
 
 Para utilizar esse plugin, você precisa primeiro ter o o `stk` da StackSpot funcionando no seu computador. Para baixar o `stk`, siga as instruções [aqui](https://stackspot.com/).
