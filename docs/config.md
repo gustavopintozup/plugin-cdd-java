@@ -3,7 +3,7 @@
 
 The plugin entry point is the `cdd.json` file, that should be placed in the root dir of the project under analysis.
 
-In the `cdd.json` file is the place you shoud list the ICPs you would like to compute. [The list of supported ICPs are listed here](ICPs).
+In the `cdd.json` file is the place you shoud list the ICPs you would like to compute. [The list of supported ICPs are listed here](ICPs.md).
 
 An example configuration file can be seen below:
 
