@@ -23,4 +23,4 @@ An example configuration file can be seen below:
 }
 ```
 
-Nesse arquivo, considera-se somente dois ICPs (ifs e tratadores de exceção), que tem o mesmo peso (1). Um arquivo cdd.json mais completo pode ser [acessado aqui](https://github.com/gustavopintozup/poc-plugin-cdd/blob/main/cdd.json).
+In here, we consider only two ICPs (`if`s and exception handlers), which have the same cost (1). A more complete `cdd.json` file is available [here](https://github.com/gustavopintozup/poc-plugin-cdd/blob/main/cdd.json).
