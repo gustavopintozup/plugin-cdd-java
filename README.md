@@ -2,6 +2,8 @@
 
 Plugin que avalia código Java usando a abordagem do CDD
 
+![Running cdd over command line](cdd.gif)
+
 ## Utilização
 
 Para utilizar esse plugin, você precisa primeiro ter o o `stk` da StackSpot funcionando no seu computador. Para baixar o `stk`, siga as instruções [aqui](https://stackspot.com/).
