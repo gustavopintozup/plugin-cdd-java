@@ -83,7 +83,7 @@ Essa saída lista quatro classes com ICP maior do que o limite definido (no caso
 
 ## Documentação
 
-Para saber mais como configurar o plugin do cdd, leia esta [documentação](documentacao-plugin-cdd.md).
+Para saber mais como configurar o plugin do cdd, leia esta [documentação](docs/config.md). A lista dos ICPs implementados está [aqui](docs/ICPs.md).
 
 
 ## Limitações conhecidas
